@@ -1,0 +1,22 @@
+
+<form class="animate__animated animate__bounce example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Country</mat-label>
+    <input type="text" #query placeholder="Pick one" aria-label="Country" matInput [formControl]="myNation"
+      [matAutocomplete]="auto" >
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredNations | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+<button class="btn btn-danger" (click)="trendingSearches(query.value)">Get Trends</button>
+
+</form>
+<div class="results">
+  <ul class="row" *ngFor="let o of trends_res ; let i =index ">
+    <li class="col-md-3" >{{ trends_res[(i)]}}<span style="margin-left:10px" class="material-icons" [cdkCopyToClipboard]="trends_res[(i)]">
+      content_copy
+    </span></li>
+  </ul>
+</div>

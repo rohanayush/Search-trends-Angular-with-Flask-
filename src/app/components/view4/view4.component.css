@@ -1,0 +1,19 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 80%;
+    margin-top:20px;
+    margin-left:80px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  li{
+    list-style: none;
+    box-shadow: 1px 1px 1px 1px pink;
+    border-radius: 11px;
+    display: flex;
+    margin:10px;
+    padding:20px;
+  }
