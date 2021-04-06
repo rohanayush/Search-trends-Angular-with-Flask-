@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
+import { AgChartsAngularModule } from 'ag-charts-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -32,6 +34,7 @@ import { View5Component } from './components/view5/view5.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxChartsModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
@@ -42,9 +45,9 @@ import { View5Component } from './components/view5/view5.component';
     ScrollingModule,
     MatToolbarModule,
     MatIconModule,
-    ClipboardModule
-
-
+    ClipboardModule,
+    AgChartsAngularModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -62,6 +62,26 @@ def trending():
     df1=df.to_json()
     return jsonify(df1)
 
+@app.route('/news', methods=['POST'])
+def get_news():
+
+    import requests
+
+    url = "https://google-search3.p.rapidapi.com/api/v1/news/q="
+    q=request.data
+    q=q.decode('utf-8')
+    url=url+str(q)
+    headers = {
+    'x-rapidapi-key': "b64d452b40mshc4e0459148c0016p11b5eajsn727b13eeebd2",
+    'x-rapidapi-host': "google-search3.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    # Make the request
+    # Convert the response to JSON format and pretty print it
+    response_json = response.json()
+    # print(response_json)
+    return jsonify(response_json)
 
 if __name__ == '__main__':
    app.run(port=5000)

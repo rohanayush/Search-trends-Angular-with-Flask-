@@ -37,4 +37,11 @@
     </mat-form-field>
     <button class="btn btn-danger" (click)="show(query.value)">Visualise</button>
   </form>
+  <div *ngIf="dict_bool">
+    <ag-charts-angular
+    style="position: relative;width: 800px;height:400px;"
+    [options]="options">
+</ag-charts-angular>
+
+  </div>
 </div>
