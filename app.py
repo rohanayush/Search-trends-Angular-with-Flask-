@@ -72,7 +72,7 @@ def get_news():
     q=q.decode('utf-8')
     url=url+str(q)
     headers = {
-    'x-rapidapi-key': "b64d452b40mshc4e0459148c0016p11b5eajsn727b13eeebd2",
+    'x-rapidapi-key': "your key",
     'x-rapidapi-host': "google-search3.p.rapidapi.com"
     }
 
